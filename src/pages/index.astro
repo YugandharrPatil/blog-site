@@ -1,7 +1,18 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Post from "@/components/post.astro";
+import { Card } from "@/components/ui/card";
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog");
 ---
 
 <Layout>
-	<h1 class="text-red-500">Welcome to My Blog!</h1>
+	<div>
+		{
+			posts.map((post) => {
+				return <Post post={post} />;
+			})
+		}
+	</div>
 </Layout>
