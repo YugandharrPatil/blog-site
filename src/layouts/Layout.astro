@@ -1,3 +1,11 @@
+---
+import { Button } from "@/components/ui/button";
+import "../styles/global.css";
+import Navbar from "@/components/navbar";
+
+const { title } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -6,18 +14,14 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+	<body class="mx-4">
+		<Navbar />
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+		<!-- <a href="/">Home</a>
+			<a href="/blog">Blog</a> -->
+	</body>
+	<slot />
+	<footer>Footer Here</footer>
+</html>
