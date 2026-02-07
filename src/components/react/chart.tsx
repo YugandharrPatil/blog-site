@@ -9,7 +9,7 @@ const data = [
 	{ name: "Fri", value: 600 },
 ];
 
-export default function SimpleChart() {
+export default function Chart() {
 	return (
 		<div style={{ width: "100%", height: 300 }}>
 			<ResponsiveContainer width="100%" height="100%">

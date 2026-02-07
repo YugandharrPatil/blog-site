@@ -1,0 +1,14 @@
+---
+import type { PostType } from "@/types";
+import Post from "./post.astro";
+
+const { posts } = Astro.props;
+---
+
+<div>
+	{
+		posts.map((post: PostType) => {
+			return <Post post={post} />;
+		})
+	}
+</div>

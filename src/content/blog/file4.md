@@ -1,6 +1,7 @@
 ---
 title: "File 4 Test Title"
 length: 34
+tags: ["tech", "philosophy"]
 ---
 
 # this is from file 4

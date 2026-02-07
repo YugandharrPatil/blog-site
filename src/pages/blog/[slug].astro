@@ -1,22 +1,22 @@
 ---
-import Layout from "@/layouts/Layout.astro";
+import Layout from "@/layouts/layout.astro";
 import { render } from "astro:content";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
 	const posts = await getCollection("blog");
 	return posts.map((post) => {
-		return { params: { slug: post.id }, props: post };
+		return { params: { slug: post.id }, props: { post } };
 	});
 }
 
-const post = Astro.props;
+const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
 <Layout title={post.id}>
 	<div>
-		<a href="/blog">Go back</a>
+		<a href="/">Go back</a>
 		<h1>
 			{post.data.title}
 		</h1>

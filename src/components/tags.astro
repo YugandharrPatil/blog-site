@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+import { Button } from "./ui/button";
+
+const posts = await getCollection("blog");
+const tags = [...new Set(posts.flatMap((post) => post.data.tags))];
+tags.unshift("all");
+
+const pathname = Astro.url.pathname;
+---
+
+<div>
+	{
+		tags.map((tag) => (
+			<a href={tag === "all" ? "/" : `/tag/${tag}/`}>
+				<Button variant={pathname === "/" && tag === "all" ? "outline" : pathname === `/tags/${tag}/` ? "outline" : "ghost"} className="hover:cursor-pointer"}>#{tag}</Button>
+			</a>
+		))
+	}
+</div>
