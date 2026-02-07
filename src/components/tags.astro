@@ -7,13 +7,16 @@ const tags = [...new Set(posts.flatMap((post) => post.data.tags))];
 tags.unshift("all");
 
 const pathname = Astro.url.pathname;
+
+const tag = "tag"
+
 ---
 
 <div>
 	{
 		tags.map((tag) => (
 			<a href={tag === "all" ? "/" : `/tag/${tag}/`}>
-				<Button variant={pathname === "/" && tag === "all" ? "outline" : pathname === `/tags/${tag}/` ? "outline" : "ghost"} className="hover:cursor-pointer"}>#{tag}</Button>
+				<Button variant={pathname === "/" && tag === "all" ? "outline" : pathname === `/tag/${tag}/` ? "outline" : "ghost"} className="hover:cursor-pointer"}>#{tag}</Button>
 			</a>
 		))
 	}
