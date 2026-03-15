@@ -11,10 +11,14 @@
             "id": "116436fcc7c0b48a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "file4.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "file4"
             }
           }
         ]
@@ -179,13 +183,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "001fa06d74f4a3af",
+  "active": "116436fcc7c0b48a",
   "lastOpenFiles": [
-    "file5.mdx",
-    "file4.md",
+    "file6.md",
     "file3.md",
     "file2.md",
     "file1.md",
+    "file7.md",
+    "file5.mdx",
+    "file4.md",
     "published/file5.mdx",
     "drafts/file9.md",
     "drafts/file8.md",
@@ -209,8 +215,6 @@
     "ready",
     "file9.md",
     "file8.md",
-    "file7.md",
-    "file6.md",
     "Welcome.md"
   ]
 }
