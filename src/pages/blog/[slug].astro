@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/layouts/layout.astro";
 import { render } from "astro:content";
 import { getCollection } from "astro:content";
-import { ChevronLeft } from "lucide-react";
+import { Icon } from "astro-icon/components";
+import Link from "@/components/link.astro";
 
 export async function getStaticPaths() {
 	const posts = await getCollection("blog");
@@ -14,22 +15,20 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+
+import { components } from "@/lib/components";
 ---
 
 <Layout title={post.id}>
-	<div>
-		<a href="/">
-			<Button variant="outline">
-				<ChevronLeft />
-				Go back</Button
-			>
-		</a>
-		<div class="my-6"></div>
-		<h1>
-			{post.data.title}
-		</h1>
-	</div>
-	<article class="prose prose-neutral dark:prose-invert">
-		<Content />
-	</article>
+	<Link href="/" variant="outline">
+		<Icon name="lucide:chevron-left" />
+		Go back
+	</Link>
+	<div class="my-6"></div>
+	<h1>
+		{post.data.title}
+	</h1>
+	<Content />
 </Layout>
+<!-- <article class="prose prose-neutral dark:prose-invert"> -->
+<!-- </article> -->

@@ -1,6 +1,8 @@
 ---
 const { post } = Astro.props;
 import { Card, CardContent } from "./ui/card";
+import { getWcAndReadingTime } from "../utils/utils";
+const { readingTime } = getWcAndReadingTime(post.body);
 ---
 
 <a href={`/blog/${post.id}/`}>
@@ -8,7 +10,8 @@ import { Card, CardContent } from "./ui/card";
 		<CardContent>
 			<h1 class="text-xl font-bold">{post.data.title}</h1>
 			<h2 class="text-md text-muted-foreground">{post.data.subtitle}</h2>
-			<p class="text-sm mt-2 text-muted-foreground">Word Count: {post.data.length}</p>
+			<!-- <p class="text-sm mt-2 text-muted-foreground">Word Count: {wordCount}</p> -->
+			<p class="text-sm mt-2 text-muted-foreground">{readingTime.minutes} {readingTime.minutes === 1 ? "minute" : "minutes"} read</p>
 		</CardContent>
 	</Card>
 </a>

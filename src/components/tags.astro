@@ -1,21 +1,21 @@
 ---
 import { getCollection } from "astro:content";
 import { Button } from "./ui/button";
+import Link from "./link.astro";
 
 const posts = await getCollection("blog");
 const tags = [...new Set(posts.flatMap((post) => post.data.tags))];
 tags.unshift("all");
 
 const pathname = Astro.url.pathname;
-
 ---
 
-<div>
+<ink>
 	{
-		tags.map((tag:string) => (
-			<a href={tag === "all" ? "/" : `/tag/${tag}/`}>
-				<Button variant={pathname === "/" && tag === "all" ? "outline" : pathname === `/tag/${tag}/` ? "outline" : "ghost"}}>#{tag}</Button>
-			</a>
+		tags.map((tag: string) => (
+			<Link href={tag === "all" ? "/" : `/tag/${tag}/`} variant={pathname === "/" && tag === "all" ? "outline" : pathname === `/tag/${tag}/` ? "outline" : "ghost"}>
+				#{tag}
+			</Link>
 		))
 	}
-</div>
+</ink>
