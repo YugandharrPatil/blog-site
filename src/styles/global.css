@@ -122,3 +122,65 @@
 		@apply bg-background text-foreground;
 	}
 }
+
+/* Markdown Formatting */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+	@apply font-bold;
+}
+
+.prose h1 {
+	@apply text-3xl;
+}
+
+.prose h2 {
+	@apply text-2xl;
+}
+
+.prose h3 {
+	@apply text-xl;
+}
+
+.prose h4 {
+	@apply text-lg;
+}
+
+.prose h5 {
+	@apply text-base;
+}
+
+.prose h6 {
+	@apply text-sm;
+}
+
+.prose a {
+	@apply text-accent-foreground font-medium no-underline hover:underline;
+}
+
+/* .prose pre {
+	@apply overflow-x-auto border border-neutral-800 bg-[#111] my-4 rounded-none;
+} */
+
+.prose code:not(pre code) {
+	@apply px-1 py-0.5 text-sm border border-gray-300 dark:border-gray-700 rounded text-gray-600 dark:text-gray-200;
+}
+
+/*remove backticks from inline code blocks*/
+.prose code:not(pre code)::before,
+.prose code:not(pre code)::after {
+	content: none;
+}
+
+.prose pre code {
+	@apply p-4 block bg-transparent;
+	border: initial;
+	line-height: 1.6;
+}
+
+.prose code span {
+	@apply font-medium text-gray-200;
+}

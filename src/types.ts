@@ -8,8 +8,8 @@ export type PostType = {
 	collection: "blog";
 	data: {
 		title: string;
+		slug: string;
 		subtitle: string;
-		length: number;
 		tags: TagsType[];
 	};
 	rendered?: RenderedContent;

@@ -1,0 +1,46 @@
+---
+import Layout from "@/layouts/layout.astro";
+import { render } from "astro:content";
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
+import Link from "@/components/link.astro";
+import type { PostType } from "@/types";
+import TagBadges from "@/components/tag-badges.astro";
+import { getWcAndReadingTime } from "@/utils/utils";
+
+export async function getStaticPaths() {
+	const posts: PostType[] = await getCollection("blog");
+	return posts.map((post) => {
+		return { params: { slug: post.data.slug }, props: { post } };
+	});
+}
+
+type Props = {
+	post: PostType;
+};
+
+const { post } = Astro.props;
+const { readingTime } = getWcAndReadingTime(post?.body);
+const { Content } = await render(post);
+
+// import { components } from "@/components/mdx/components";
+---
+
+<Layout title={post.data.slug}>
+	<Link href="/" variant="outline">
+		<Icon name="lucide:chevron-left" />
+		Go back
+	</Link>
+	<div class="mb-12 mt-8">
+		<h1 class="text-3xl font-bold">
+			{post.data.title}
+		</h1>
+		<h2 class="text-muted-foreground font-semibold">{post.data.subtitle}</h2>
+		<TagBadges post={post} />
+		<p class="text-sm mt-2 text-muted-foreground">{readingTime.minutes} Minute Read</p>
+		<hr class="my-6" />
+	</div>
+	<article class="prose max-w-none hover:prose-a:underline">
+		<Content />
+	</article>
+</Layout>
