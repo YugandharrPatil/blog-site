@@ -2,14 +2,16 @@
 import Posts from "@/components/posts.astro";
 import Tags from "@/components/tags.astro";
 import Layout from "@/layouts/layout.astro";
+import type { PostType } from "@/types";
 import { getCollection } from "astro:content";
+import type { TagsType } from "@/types";
 
-const posts = await getCollection("blog");
+const posts: PostType[] = await getCollection("blog");
 const tags = [...new Set(posts.flatMap((post) => post.data.tags))];
 
 export async function getStaticPaths() {
-	const posts = await getCollection("blog");
-	const tags = [...new Set(posts.flatMap((post) => post.data.tags))];
+	const posts: PostType[] = await getCollection("blog");
+	const tags: TagsType[] = [...new Set(posts.flatMap((post) => post.data.tags))];
 
 	return tags.map((tag) => ({
 		params: { tag },
@@ -18,7 +20,7 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 
-const filteredPosts = posts.filter((post: any) => post.data.tags.includes(tag));
+const filteredPosts = posts.filter((post: PostType) => post.data.tags.includes(tag));
 ---
 
 <Layout>

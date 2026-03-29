@@ -1,5 +1,4 @@
 ---
-import { Button } from "@/components/ui/button";
 import Layout from "@/layouts/layout.astro";
 import { render } from "astro:content";
 import { getCollection } from "astro:content";
@@ -13,10 +12,16 @@ export async function getStaticPaths() {
 	});
 }
 
+type Props = {
+	post: PostType;
+};
+
 const { post } = Astro.props;
 const { Content } = await render(post);
 
 import { components } from "@/lib/components";
+import type { PostType } from "@/types";
+import TagBadges from "@/components/tag-badges.astro";
 ---
 
 <Layout title={post.id}>
@@ -28,6 +33,8 @@ import { components } from "@/lib/components";
 	<h1>
 		{post.data.title}
 	</h1>
+	<h2 class="text-muted-foreground">{post.data.subtitle}</h2>
+	<TagBadges post={post} />
 	<Content />
 </Layout>
 <!-- <article class="prose prose-neutral dark:prose-invert"> -->

@@ -1,16 +1,27 @@
 ---
-const { post } = Astro.props;
 import { Card, CardContent } from "./ui/card";
 import { getWcAndReadingTime } from "../utils/utils";
-const { readingTime } = getWcAndReadingTime(post.body);
+import type { PostType } from "@/types";
+import { Badge } from "./ui/badge";
+import TagBadges from "./tag-badges.astro";
+
+type Props = {
+	post: PostType;
+};
+
+const { post } = Astro.props;
+const { readingTime } = getWcAndReadingTime(post?.body);
+
+const pathname = Astro.url.pathname;
 ---
 
 <a href={`/blog/${post.id}/`}>
 	<Card className="hover:shadow-lg transition-all my-4">
 		<CardContent>
 			<h1 class="text-xl font-bold">{post.data.title}</h1>
-			<h2 class="text-md text-muted-foreground">{post.data.subtitle}</h2>
+			<h2 class="text-md font-medium text-muted-foreground">{post.data.subtitle}</h2>
 			<!-- <p class="text-sm mt-2 text-muted-foreground">Word Count: {wordCount}</p> -->
+			<TagBadges post={post} pathname={pathname} />
 			<p class="text-sm mt-2 text-muted-foreground">{readingTime.minutes} {readingTime.minutes === 1 ? "minute" : "minutes"} read</p>
 		</CardContent>
 	</Card>

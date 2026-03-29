@@ -19,7 +19,8 @@ function calculateReadingTime(wordCount: number, wpm = 200) {
 	};
 }
 
-export function getWcAndReadingTime(markdown: string) {
+export function getWcAndReadingTime(markdown: string | undefined) {
+	if (!markdown) return { wordCount: 0, readingTime: { minutes: 0, seconds: 0 } };
 	const wordCount = getWordCount(markdown);
 	const readingTime = calculateReadingTime(wordCount, 200);
 	return { wordCount, readingTime };

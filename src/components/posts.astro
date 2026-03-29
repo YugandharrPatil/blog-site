@@ -2,6 +2,10 @@
 import type { PostType } from "@/types";
 import Post from "./post.astro";
 
+type Props = {
+	posts: PostType[];
+};
+
 const { posts } = Astro.props;
 ---
 

@@ -1,0 +1,15 @@
+---
+import type { PostType } from "@/types";
+import { Badge } from "./ui/badge";
+
+type Props = {
+	post: PostType;
+	pathname?: string;
+};
+
+const { post, pathname } = Astro.props;
+---
+
+<div class="flex gap-2 mt-2">
+	{post.data.tags.map((tag) => <Badge variant={pathname === `/tag/${tag}/` ? "secondary" : "outline"}>#{tag}</Badge>)}
+</div>
