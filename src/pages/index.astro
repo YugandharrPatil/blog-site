@@ -2,16 +2,18 @@
 import Posts from "@/components/posts.astro";
 import Tags from "@/components/tags.astro";
 import Layout from "@/layouts/layout.astro";
+import type { PostType } from "@/types";
 import { getCollection } from "astro:content";
 
-const posts = await getCollection("blog");
-const draftPosts = posts.filter((post) => post.id.startsWith("drafts/"));
-const tags = [...new Set(posts.flatMap((post) => post.data.tags))];
-
-const pathname = Astro.url.pathname;
+const posts: PostType[] = await getCollection("blog");
 ---
 
 <Layout>
+	<div class="mb-8">
+		<h1 class="text-xl font-bold">I write my mind out.</h1>
+		<h2 class="font-medium text-muted-foreground">If something resonates, take bits and pieces. If nothing resonates, don't think twice to leave.</h2>
+		<hr class="mt-4" />
+	</div>
 	<Tags />
 	<Posts posts={posts} />
 </Layout>
