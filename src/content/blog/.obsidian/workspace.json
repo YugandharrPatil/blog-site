@@ -1,54 +1,212 @@
 {
   "main": {
-    "id": "25828d2acc0d551d",
+    "id": "d1d1f311b85f155b",
     "type": "split",
     "children": [
       {
-        "id": "d5264641483ea2bd",
+        "id": "8622966299d57bda",
         "type": "tabs",
         "children": [
           {
-            "id": "116436fcc7c0b48a",
+            "id": "f69a57967cd8eb44",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "file4.md",
+                "file": "drafts/everybody is a sellout except people at the top.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "file4"
+              "title": "everybody is a sellout except people at the top"
+            }
+          },
+          {
+            "id": "4c3c01e2c87ea518",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "drafts/\"podcasts\".md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "\"podcasts\""
+            }
+          },
+          {
+            "id": "05c06b76aa910e54",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "drafts/why people are obsessed with web development.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "why people are obsessed with web development"
+            }
+          },
+          {
+            "id": "3e6890d5f062402a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "drafts/level of judgement is directly proportional to permissible laziness.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "level of judgement is directly proportional to permissible laziness"
+            }
+          },
+          {
+            "id": "1729577de432d377",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "drafts/finding out the exact cause, is as good as solving it.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "finding out the exact cause, is as good as solving it"
+            }
+          },
+          {
+            "id": "521d42333f11c0a0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "drafts/the solve is often just a single puzzle piece away.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "the solve is often just a single puzzle piece away"
+            }
+          },
+          {
+            "id": "77119ce077704427",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "drafts/why advices don't work.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "why advices don't work"
             }
           }
-        ]
+        ],
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "9708463bb669d92b",
+    "id": "53411c5a801cbc05",
     "type": "split",
     "children": [
       {
-        "id": "318ce840625346b8",
+        "id": "2614202f3cd53eb0",
         "type": "tabs",
+        "dimension": 61.09422492401215,
         "children": [
           {
-            "id": "001fa06d74f4a3af",
+            "id": "d2626d4a3d7b9579",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "6def4ec670c7f95f",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
             }
           },
           {
-            "id": "6c06119e7238695f",
+            "id": "f42ff20ce999cf94",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "e8b3e71c79c244af",
+            "type": "leaf",
+            "state": {
+              "type": "tagfolder-view",
+              "state": {},
+              "icon": "stacked-levels",
+              "title": "Tag Folder"
+            }
+          },
+          {
+            "id": "ce32700738d62675",
+            "type": "leaf",
+            "state": {
+              "type": "tagfolder-view",
+              "state": {},
+              "icon": "stacked-levels",
+              "title": "Tag Folder"
+            }
+          },
+          {
+            "id": "12983e64dc134098",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "com.maxymillion.zen",
+              "state": {},
+              "pinned": true,
+              "icon": "eye",
+              "title": "Zen"
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "1b0d899170c7aeae",
+        "type": "tabs",
+        "dimension": 38.90577507598784,
+        "children": [
+          {
+            "id": "31e1f166ecea8114",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -63,158 +221,152 @@
               "icon": "lucide-search",
               "title": "Search"
             }
-          },
-          {
-            "id": "188a242797a23219",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "Bookmarks"
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
-    "id": "bf5b0de52290cf3f",
+    "id": "4d77c1e8f26befe6",
     "type": "split",
     "children": [
       {
-        "id": "9e8f441d8053bc00",
+        "id": "f7e5aa1e717c8226",
         "type": "tabs",
         "children": [
           {
-            "id": "2dae926c31687e87",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Welcome.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks for Welcome"
-            }
-          },
-          {
-            "id": "55084789bc838114",
+            "id": "dc29d83d638f3213",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Welcome.md",
+                "file": "Go.md",
                 "linksCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Welcome"
+              "title": "Outgoing links from Go"
             }
           },
           {
-            "id": "962427be1c9bb41d",
+            "id": "07e2f4f183b35f9f",
             "type": "leaf",
             "state": {
-              "type": "tag",
+              "type": "backlink",
               "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true,
+                "collapseAll": true,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
                 "showSearch": false,
-                "searchQuery": ""
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
               },
-              "icon": "lucide-tags",
-              "title": "Tags"
+              "icon": "links-coming-in",
+              "title": "Backlinks"
             }
           },
           {
-            "id": "abf31060eecb1cad",
-            "type": "leaf",
-            "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-archive",
-              "title": "All properties"
-            }
-          },
-          {
-            "id": "c87e5b87659097f0",
+            "id": "f834e525a14c462d",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Welcome.md",
+                "file": "healthy low calorie packaged foods.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Welcome"
+              "title": "Outline of healthy low calorie packaged foods"
+            }
+          },
+          {
+            "id": "dd337e6537275e08",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "advanced-tables-toolbar"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "command-palette:Open command palette": true,
+      "workspaces:Manage workspace layouts": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "omnisearch:Omnisearch": false,
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false,
+      "syncthing-integration:Open Syncthing conflict manager modal": false
     }
   },
-  "active": "116436fcc7c0b48a",
+  "active": "77119ce077704427",
   "lastOpenFiles": [
-    "file6.md",
-    "file3.md",
-    "file2.md",
-    "file1.md",
-    "file7.md",
-    "file5.mdx",
-    "file4.md",
-    "published/file5.mdx",
-    "drafts/file9.md",
-    "drafts/file8.md",
-    "drafts/file7.md",
-    "drafts/file6.md",
-    "drafts/file5.mdx",
-    "drafts",
-    "published/drafts/file9.md",
-    "published/drafts/file8.md",
-    "published/drafts/file7.md",
-    "published/drafts/file6.md",
-    "published/drafts/file5.mdx",
-    "published/drafts",
-    "components/chart.tsx",
-    "components",
-    "published/file4.md",
-    "published/file3.md",
-    "published/file2.md",
-    "published/file1.md",
-    "published",
-    "ready",
-    "file9.md",
-    "file8.md",
-    "Welcome.md"
+    "drafts/how to buy stuff.md",
+    "drafts/high achievers.md",
+    "high achievers.md",
+    "drawings/progress.excalidraw",
+    "drawings/high achievers.md",
+    "drawings",
+    "drafts/drawings/high achievers.md",
+    "drafts/drawings/progress.excalidraw",
+    "drafts/drawings",
+    "drafts/my opinion on science based lifting.md",
+    "drafts/the-world-is-your-oyester.mdx",
+    "drafts/test.mdx",
+    "drafts/real-learning-happens-via-application.mdx",
+    "drafts/obsession-is-necessary-for-triumph.mdx",
+    "drafts/fear-is-the-driver-for-most-things.mdx",
+    "drafts/causation-is-real-effect-is-fake.mdx",
+    "fear drives \"everything\".md",
+    "everybody can be abundant, not rich.md",
+    "the world is literally your oyster.md",
+    "progress.md",
+    "my opinion on science based lifting.md",
+    "how to buy stuff.md",
+    "drafts/why advices don't work.md",
+    "drafts/the solve is often just a single puzzle piece away.md",
+    "drafts/finding out the exact cause, is as good as solving it.md",
+    "drafts/level of judgement is directly proportional to permissible laziness.md",
+    "drafts/is gambling really bad?.md",
+    "drafts/how the 18 y o you envy got rich.md",
+    "drafts/real learning happens via application.md",
+    "drafts/everybody is a sellout except people at the top.md",
+    "drafts/why people are obsessed with web development.md",
+    "drafts/\"podcasts\".md",
+    "drafts/indian parents.md",
+    "drafts/the importance of high self esteem.md",
+    "drafts/how ADHD f**ked my life.md",
+    "drafts/google is not a \"technology\" company.md",
+    "images/progress.png",
+    "images/image.png",
+    "Pasted image 20260212194423.png",
+    "Pasted image 20260212194406.png",
+    "Pasted image 20260212194354.png",
+    "Pasted image 20260212194135.png",
+    "Pasted image 20260209191623.png",
+    "Pasted image 20260209191550.png",
+    "Pasted image 20260108041953.png",
+    "Pasted image 20251229142520.png",
+    "Untitled.canvas"
   ]
 }
