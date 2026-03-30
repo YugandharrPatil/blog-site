@@ -23,7 +23,7 @@ const { post } = Astro.props;
 const { readingTime } = getWcAndReadingTime(post?.body);
 const { Content } = await render(post);
 
-// import { components } from "@/components/mdx/components";
+import { components } from "@/components/mdx/components";
 ---
 
 <Layout title={post.data.slug}>
@@ -41,6 +41,6 @@ const { Content } = await render(post);
 		<hr class="my-6" />
 	</div>
 	<article class="prose max-w-none hover:prose-a:underline">
-		<Content />
+		<Content components={components} />
 	</article>
 </Layout>
