@@ -7,10 +7,11 @@ import type { PostType } from "@/types";
 import { getCollection } from "astro:content";
 
 const posts: PostType[] = await getCollection("blog");
+const publishedPosts = posts.filter((post) => post.filePath?.startsWith("src/content/blog/published"));
 ---
 
 <Layout title="Home">
 	<Disclaimer />
 	<Tags />
-	<Posts posts={posts} />
+	<Posts posts={publishedPosts} />
 </Layout>
