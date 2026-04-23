@@ -9,7 +9,7 @@ import { getCollection } from "astro:content";
 const posts: PostType[] = await getCollection("blog");
 ---
 
-<Layout>
+<Layout title="Home">
 	<Disclaimer />
 	<Tags />
 	<Posts posts={posts} />

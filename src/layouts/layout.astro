@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Navbar from "@/components/navbar.astro";
 import Footer from "@/components/footer.astro";
+import { ClientRouter } from "astro:transitions";
 
 const { title } = Astro.props;
 ---
@@ -14,11 +15,28 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
+		<ClientRouter />
 		<title>{title} | YugZ</title>
+		<script is:inline>
+			const getTheme = () => {
+				const theme = typeof localStorage !== "undefined" ? localStorage.getItem("theme") : null;
+				return theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches) || (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches);
+			};
+
+			const setTheme = (doc) => {
+				doc.documentElement.classList[getTheme() ? "add" : "remove"]("dark");
+			};
+
+			setTheme(document);
+
+			document.addEventListener("astro:before-swap", (e) => {
+				setTheme(e.newDocument);
+			});
+		</script>
 	</head>
 	<body class="container mx-auto">
 		<Navbar />
 		<slot />
-		<!-- <Footer /> -->
+		<Footer />
 	</body>
 </html>

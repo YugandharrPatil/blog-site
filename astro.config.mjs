@@ -11,12 +11,15 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
+	prefetch: true,
 	integrations: [
 		mdx(),
 		react(),
 		icon({
 			include: {
 				lucide: ["chevron-left"],
+				"fa6-brands": ["twitter", "instagram", "github"],
+				"fa6-regular": ["envelope"],
 			},
 		}),
 	],

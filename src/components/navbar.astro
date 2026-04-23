@@ -1,8 +1,12 @@
-<nav class="h-20 container mx-auto flex items-center">
+---
+import { ModeToggle } from "@/components/react/mode-toggle";
+---
+
+<nav class="h-20 container mx-auto flex items-center justify-between">
 	<a href="/">
 		<h1 class="font-bold text-3xl">
-			Yugz
-			<span class="text-orange-400">.</span>
+			YugZ<span class="text-link">.</span>
 		</h1>
 	</a>
+	<ModeToggle client:load />
 </nav>
