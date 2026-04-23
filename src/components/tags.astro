@@ -3,7 +3,8 @@ import { getCollection } from "astro:content";
 import Link from "./link.astro";
 
 const posts = await getCollection("blog");
-const tags = [...new Set(posts.flatMap((post) => post.data.tags))];
+const publishedPosts = posts.filter((post) => post.filePath?.startsWith("src/content/blog/published"));
+const tags = [...new Set(publishedPosts.flatMap((post) => post.data.tags))];
 tags.unshift("all");
 
 const pathname = Astro.url.pathname;
