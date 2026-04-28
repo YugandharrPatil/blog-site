@@ -1,7 +1,5 @@
 import type { RenderedContent } from "astro:content";
 
-export type TagsType = "tech" | "hardware" | "philosophy";
-
 export type PostType = {
 	id: string;
 	body?: string;
@@ -10,7 +8,7 @@ export type PostType = {
 		title: string;
 		slug: string;
 		subtitle: string;
-		tags: TagsType[];
+		tags: string[];
 	};
 	rendered?: RenderedContent;
 	filePath?: string;

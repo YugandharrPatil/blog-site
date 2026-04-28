@@ -14,7 +14,7 @@ const pathname = Astro.url.pathname;
 	{
 		tags.map((tag: string) => (
 			<Link className="font-semibold" href={tag === "all" ? "/" : `/tag/${tag}/`} variant={pathname === "/" && tag === "all" ? "outline" : pathname === `/tag/${tag}/` ? "outline" : "ghost"}>
-				#{tag}
+				#{tag === "hot" ? "hot🔥" : tag}
 			</Link>
 		))
 	}

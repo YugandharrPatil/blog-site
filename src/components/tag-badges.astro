@@ -11,5 +11,5 @@ const { post, pathname } = Astro.props;
 ---
 
 <div class="flex gap-2 mt-2">
-	{post.data.tags.map((tag) => <Badge variant={pathname === `/tag/${tag}/` ? "secondary" : "outline"}>#{tag}</Badge>)}
+	{post.data.tags.map((tag) => <Badge variant={pathname === `/tag/${tag}/` ? "secondary" : "outline"}>#{tag === "hot" ? "hot🔥" : tag}</Badge>)}
 </div>
