@@ -162,8 +162,9 @@
 	@apply text-sm;
 }
 
-.prose a {
-	@apply text-link no-underline hover:underline font-semibold;
+.prose a,
+.link {
+	@apply text-link no-underline hover:underline;
 }
 
 /* .prose pre {
