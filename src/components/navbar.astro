@@ -2,11 +2,13 @@
 import { ModeToggle } from "@/components/react/mode-toggle";
 ---
 
-<nav class="h-20 container mx-auto flex items-center justify-between">
-	<a href="/">
-		<h1 class="font-bold text-3xl">
-			YugZ<span class="text-link">.</span>
-		</h1>
-	</a>
-	<ModeToggle client:load />
-</nav>
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+	<nav class="h-20 container mx-auto flex items-center justify-between px-4 md:px-0">
+		<a href="/">
+			<h1 class="font-bold text-3xl">
+				YugZ<span class="text-link">.</span>
+			</h1>
+		</a>
+		<ModeToggle client:load />
+	</nav>
+</header>
